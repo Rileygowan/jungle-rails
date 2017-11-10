@@ -29,6 +29,26 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="dl-vertical">
+          <h2>Add Review:</h2>
+          <%= form_for @product.reviews.build, url: product_reviews_path(@product) do |f| %>
+            <p>
+              <%= f.text_area :description %>
+            </p>
+            <p>
+              <%= f.label :rating %>
+              <%= f.select :rating, [1,2,3,4,5], :prompt => 'Select One' %>
+            </p>
+            <%= f.submit "Submit", class: "btn" %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="dl-vertical">
           <h2>Review:</h2>
             Description: <%= @review.description %>
           </div>
