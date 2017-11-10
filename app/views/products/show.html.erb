@@ -32,6 +32,7 @@
           <h2>Add Review:</h2>
           <%= form_for @product.reviews.build, url: product_reviews_path(@product) do |f| %>
             <p>
+              <%= f.label :description %>
               <%= f.text_area :description %>
             </p>
             <p>
@@ -50,10 +51,14 @@
       <div class="col-sm-4">
         <div class="dl-vertical">
           <h2>Review:</h2>
-            Description: <%= @review.description %>
-          </div>
-          <div>
-            Rating: <%= @review.rating %>
+            <% @product.reviews.each do |p| %>
+            <p>
+              <strong>Description</strong>: <%= p.description %>
+            </p>
+            <p>
+              <strong>Rating</strong>: <%= p.rating %>
+            </p>
+          <% end %>
           </div>
         </div>
       </div>
