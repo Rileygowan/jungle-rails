@@ -27,14 +27,18 @@
     </div>
 
     <div class="row">
-      <h2>Review:</h2>
-      <div>
-        Description: <%= @review.description %>
-      </div>
-      <div>
-        Rating: <%= @review.rating %>
+      <div class="col-sm-4">
+        <div class="dl-vertical">
+          <h2>Review:</h2>
+            Description: <%= @review.description %>
+          </div>
+          <div>
+            Rating: <%= @review.rating %>
+          </div>
+        </div>
       </div>
     </div>
+
   </article>
 
 </section>
