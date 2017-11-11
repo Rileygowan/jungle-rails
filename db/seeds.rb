@@ -132,4 +132,28 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+puts "Creating users..."
+
+user1 = User.create!(first_name: Faker::Internet.user_name, last_name: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(6))
+user2 = User.create!(first_name: Faker::Internet.user_name, last_name: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(6))
+user3 = User.create!(first_name: Faker::Internet.user_name, last_name: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(6))
+user4 = User.create!(first_name: Faker::Internet.user_name, last_name: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(6))
+user5 = User.create!(first_name: Faker::Internet.user_name, last_name: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(6))
+
+## REVIEWS
+product = Product.all
+
+puts "Creating reviews..."
+
+review1 = Review.create!(product_id: product.sample.id, user_id: 1, description: "Worst thing ever purchased!", rating: 1)
+review2 = Review.create!(product_id: product.sample.id, user_id: 2, description: "I puked!", rating: 2)
+review3 = Review.create!(product_id: product.sample.id, user_id: 3, description: "Wow...", rating: 2)
+review4 = Review.create!(product_id: product.sample.id, user_id: 4, description: "Great stuff", rating: 3)
+review5 = Review.create!(product_id: product.sample.id, user_id: 5, description: "Fab, fab", rating: 4)
+review6 = Review.create!(product_id: product.sample.id, user_id: 3, description: "Give me my money back...", rating: 1)
+review7 = Review.create!(product_id: product.sample.id, user_id: 5, description: "Tasted great!", rating: 5)
+review8 = Review.create!(product_id: product.sample.id, user_id: 5, description: "Shipped 25 months late", rating: 1)
+review9 = Review.create!(product_id: product.sample.id, user_id: 5, description: "Feels great on the skin", rating: 5)
+review10 = Review.create!(product_id: product.sample.id, user_id: 5, description: "Mmmmm...", rating: 4)
+
 puts "DONE!"
