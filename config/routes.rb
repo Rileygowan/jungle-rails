@@ -18,8 +18,10 @@ Rails.application.routes.draw do
   end
 
 resources :product do
-  resources :reviews, only: [:create]
+  resources :reviews, only: [:create, :destroy]
 end
+
+
 
   resources :orders, only: [:create, :show]
 

@@ -132,25 +132,4 @@ cat3.products.create!({
   price: 2_483.75
 })
 
-puts "Re-creating Reviews ..."
-
-## CATEGORIES
-
-puts "Finding or Creating Products ..."
-
-products = Product.all
-
-Review.destroy_all
-
-## REVIEWS
-products.each do |product|
-  product.reviews.create!({
-  description: "Best products I've ever used",
-  rating: 5,
-  user_id: 1,
-})
-end
-
-
-
 puts "DONE!"

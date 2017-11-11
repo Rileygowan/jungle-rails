@@ -5,8 +5,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    # @review = Review.find_by(product_id: params[:id])
+    @review = Review.new(product_id: params[:id])
     @product = Product.find(params[:id])
+  end
+
+  def destroy
   end
 
 end
