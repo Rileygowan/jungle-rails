@@ -2,6 +2,9 @@
 
 A unscale, hipster-facing online store specializing in apparel, furniture and gadgets.
 
+![Homepage](https://github.com/Rileygowan/jungle-rails/blob/master/app/assets/images/homepage.png?raw=true)
+![Cart](https://github.com/Rileygowan/jungle-rails/blob/master/app/assets/images/cart.png?raw=true)
+
 ## Setup
 
 1. Fork & Clone
