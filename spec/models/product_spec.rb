@@ -39,6 +39,7 @@ RSpec.describe Product, type: :model do
           quantity: 300
         )
       expect(@product).to_not be_valid
+      expect(@product.errors.full_messages).to include("Price can't be blank")
     end
     it 'should not save when quantity is set to nil' do
       @category = Category.new(
@@ -50,6 +51,8 @@ RSpec.describe Product, type: :model do
           price: 450,
           quantity: nil
         )
+      expect(@product).to_not be_valid
+      expect(@product.errors.full_messages).to include("Quantity can't be blank")
     end
     it 'should not save when the category is set to nil' do
       @product = Product.new(
