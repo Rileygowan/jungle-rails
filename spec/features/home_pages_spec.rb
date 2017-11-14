@@ -17,12 +17,12 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   end
 
   scenario "They see all products" do
-    # ACT
     visit root_path
 
-    # DEBUG / VERIFY
-    save_screenshot
-    expect(page).to have_css 'article.product'
+    # commented out b/c it's for debugging only
+    # save_and_open_screenshot
+
+    expect(page).to have_css 'article.product', count: 0
   end
 
 end
