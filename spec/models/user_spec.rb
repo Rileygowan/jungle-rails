@@ -73,7 +73,7 @@ RSpec.describe User, type: :model do
     end
   end
   describe '.authenticate_with_credentials' do
-    it 'should create a new session if the user exists in the database and password is valid' do
+    it 'should create a new session if the user exists in the database && password is valid' do
       @user = User.new(
           first_name: 'riley',
           last_name: 'gowan',
